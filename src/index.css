@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.font-serif-display {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #0c040a;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  color: #fff1f2;
+}
+
+@keyframes floatUpHeart {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(0.85);
+  }
+  50% {
+    transform: translateY(-50vh) rotate(12deg) scale(1.05);
+  }
+  100% {
+    transform: translateY(-110vh) rotate(-12deg) scale(0.85);
+  }
+}
+
+.floating-heart {
+  animation-name: floatUpHeart;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fadeInQuick {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.fade-in-quick {
+  animation: fadeInQuick 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
